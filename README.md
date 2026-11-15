@@ -15,3 +15,6 @@ React + TypeScript + Vite + Framer Motion. Content lives in `src/data.ts`; style
 Then in the repo: Settings → Pages → Source: GitHub Actions. The workflow deploys on every push to `main`.
 
 Replace: project screenshots (see the placeholder in `ProjectCard`), `public/portrait.jpg`, `public/May_Myat_Noe_Lwin_CV.pdf`.
+
+## Add project screenshots
+Put images in `public/projects/` and add `img:"projects/boardsight.png"` to the project in `src/data.ts`.

@@ -1,10 +1,10 @@
-import {useEffect,useMemo,useRef} from 'react';
+import {useEffect,useMemo,useRef,type CSSProperties} from 'react';
 
 export function Background(){
   const stars=useMemo(()=>Array.from({length:innerWidth<860?16:34},(_,i)=>({
     s:6+Math.random()*10,d:3+Math.random()*4,l:-Math.random()*6,x:Math.random()*100,y:Math.random()*100,c:i%3?'--rose':'--dusty'})),[]);
   return <div className="bg" aria-hidden="true"><i/><i/>
-    {stars.map((a,i)=><b key={i} style={{['--s' as string]:a.s+'px',['--d' as string]:a.d+'s',['--l' as string]:a.l+'s',left:a.x+'%',top:a.y+'%',background:`var(${a.c})`}}/>)}</div>;
+    {stars.map((a,i)=><b key={i} style={{'--s':a.s+'px','--d':a.d+'s','--l':a.l+'s',left:a.x+'%',top:a.y+'%',background:`var(${a.c})`} as CSSProperties}/>)}</div>;
 }
 
 export function Cursor(){
